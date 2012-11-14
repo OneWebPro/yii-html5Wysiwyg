@@ -41,7 +41,7 @@ class html5 extends CWidget
         Yii::app()->clientScript->registerCoreScript('jquery.ui');
 
         $assetUrl = Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('ext.html5Wysiwyg'));
-        Yii::app()->clientScript->registerScriptFile($assetUrl . '/js/wysihtml5-0.3.0.js');
+        Yii::app()->clientScript->registerScriptFile($assetUrl . '/js/wysihtml5-0.3.0.min.js');
         Yii::app()->clientScript->registerCssFile($assetUrl . '/css/wysiwyg-color.css');
         if ($this->bootstrap) {
             Yii::app()->clientScript->registerCssFile($assetUrl . '/css/bootstrap.min.css');
