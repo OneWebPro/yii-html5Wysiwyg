@@ -120,7 +120,6 @@ class html5 extends CWidget
     private function mergeButtons()
     {
         $this->buttons = CMap::mergeArray(
-            $this->buttons,
             array(
                 "font-styles" => true,
                 "emphasis" => true,
@@ -130,7 +129,9 @@ class html5 extends CWidget
                 "image" => true,
                 "color" => false,
                 "stylesheets" => false,
-            ));
+            ),
+            $this->buttons
+        );
     }
 
     public function boolToString($in)
