@@ -31,6 +31,7 @@ class html5 extends CWidget
     public $locale = null;
     public $form = null;
     public $buttons = array();
+    public $parserRules = array ();
 
     /**
      * Scripts registration
@@ -114,6 +115,7 @@ class html5 extends CWidget
             'identifier' => ($this->id == null ? '.' . ($this->class == null ? 'html5Wyswig' : $this->class) : '#' . $this->id),
             'buttons' => $this->buttons,
             'locale' => $this->locale,
+            'parserRules' => $this->parserRules,
         ));
     }
 
