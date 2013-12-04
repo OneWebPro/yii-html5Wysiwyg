@@ -12,7 +12,10 @@
             "link":<?php echo $this->boolToString($buttons['link'])?>,
             "image":<?php echo $this->boolToString($buttons['image'])?>,
             "color":<?php echo $this->boolToString($buttons['color'])?>,
-            "stylesheets": <?php echo $this->boolToString($buttons['color'])?>
+            "stylesheets": <?php echo $this->boolToString($buttons['color'])?>,
+        <?php if (!empty($parserRules)): ?>
+            "parserRules": <?php echo CJSON::encode($parserRules); ?>
+        <?php endif; ?>
         });
     });
 </script>
